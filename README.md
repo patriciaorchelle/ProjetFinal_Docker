@@ -4,8 +4,10 @@
   • Simuler un projet d'entreprise réel où plusieurs développeurs travaillent sur le même
     projet et chacun développe une fonctionnalité dans une branche diérente puis
     fusionne sa version nale avec la branche principale (main).
+    
   • Créer ensuite un docker qui se base sur le repository Github (branche main) en
     rajoutant le Dockerle.
+    
   • Rajouter un docker-compose pour faciliter la mise le paramétrage et la mise à jour du docker.
 
 
