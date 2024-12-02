@@ -1,4 +1,4 @@
-# Explication du processus de fonctionnement
+
 # Objectif
 
   • Simuler un projet d'entreprise réel où plusieurs développeurs travaillent sur le même
@@ -8,6 +8,8 @@
     rajoutant le Dockerle.
   • Rajouter un docker-compose pour faciliter la mise le paramétrage et la mise à jour du docker.
 
+
+# Explication du processus de fonctionnement
   
 # 1. Génération de donnes
 Cette partie est consacrée à la génération des données en se basant sur la laibrairie `make_classification`de sklearn.
