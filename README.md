@@ -39,9 +39,9 @@ Nous avons ensuite utilisé ces modèles dans le fichier EDA_datageneration.ipyn
   - L'utilisation du gridsearch nous a permis de trouver la meilleure combinaison des hyperparamètres de chaque modèle.
 
 Lorsque la meilleure combinaison est trouvée, nous avons créé le fichier .py qui reprend :
+  
     a. Génération de données : Le code génère un jeu de données synthétiques avec 15 000 échantillons et 20 caractéristiques à l'aide de `make_classification` de `scikit-learn`. 
     Certaines caractéristiques sont informatives, d'autres redondantes. Une  sélection de colonnes est ensuite effectuée pour réduire le nombre de caractéristiques utilisées.
-    
     b. Séparation des données: Le jeu de données est divisé en ensembles d'entraînement, de test et de validation à l'aide de `train_test_split`.
     L'argument `stratify=y` est utilisé pour maintenir la distribution des classes dans les sous-ensembles.
     
