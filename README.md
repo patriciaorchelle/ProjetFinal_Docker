@@ -35,17 +35,23 @@ Une première boucle `for`nous a permit de sélectionner trois modèles qui perf
   -  `KNN`
 
 Nous avons ensuite utilisé ces modèles dans le fichier EDA_datageneration.ipynb pour aller vite.
-  - Le méthode Elbow nous a permis prendre une plage restreinte des valeurs de nombre de voisions à prendre ( dans un intervalle [1,20], on a seulement pris 3,5 et 7 pour le gridsearch)
+  - Le méthode Elbow nous a permis prendre une plage restreinte des valeurs de nombre de voisions à prendre ( dans un intervalle [1,20],
+  - on a seulement pris 3,5 et 7 pour le gridsearch)
   - L'utilisation du gridsearch nous a permis de trouver la meilleure combinaison des hyperparamètres de chaque modèle.
 
 Lorsque la meilleure combinaison est trouvée, nous avons créé le fichier .py qui reprend :
   
-    a. Génération de données : Le code génère un jeu de données synthétiques avec 15 000 échantillons et 20 caractéristiques à l'aide de `make_classification` de `scikit-learn`. 
-    Certaines caractéristiques sont informatives, d'autres redondantes. Une  sélection de colonnes est ensuite effectuée pour réduire le nombre de caractéristiques utilisées.
-    b. Séparation des données: Le jeu de données est divisé en ensembles d'entraînement, de test et de validation à l'aide de `train_test_split`.
+    a. Génération de données : 
+    Le code génère un jeu de données synthétiques avec 15 000 échantillons et 20 caractéristiques à l'aide de 
+    `make_classification` de `scikit-learn`. 
+    Certaines caractéristiques sont informatives, d'autres redondantes. Une  sélection de colonnes est ensuite effectuée pour 
+    réduire le nombre de caractéristiques utilisées.
+    b. Séparation des données: Le jeu de données est divisé en ensembles d'entraînement, de test et de validation à 
+    l'aide de `train_test_split`.
     L'argument `stratify=y` est utilisé pour maintenir la distribution des classes dans les sous-ensembles.
     
-    c. Entraînement et sélection du meilleur modèle : Trois modèles (Random Forest, SVM et Gradient Boosting) sont entraînés sur les données d'entraînement.
+    c. Entraînement et sélection du meilleur modèle : Trois modèles (Random Forest, SVM et Gradient Boosting) sont 
+    entraînés sur les données d'entraînement.
     La précision de chaque modèle est calculée sur l'ensemble de test. Le modèle ayant la       
          meilleure précision est sélectionné.
     
@@ -54,7 +60,8 @@ Lorsque la meilleure combinaison est trouvée, nous avons créé le fichier .py 
     
     # Points clés :
     - Modularité : Le code est bien structuré, avec des fonctions claires et séparées pour chaque étape du processus.
-    - Utilisation de `stratify` : Cette approche garantit que la distribution des classes est maintenue dans les sous-ensembles de données,
+    - Utilisation de `stratify` : Cette approche garantit que la distribution des classes est maintenue dans
+    les sous-ensembles de données,
     ce qui est important pour les problèmes de classification.
     - Approche simple et efficace : Le code utilise une méthode simple mais efficace pour entraîner et comparer plusieurs modèles.
     
