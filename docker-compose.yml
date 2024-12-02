@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  model_classification:
+    build: .
+    container_name: model_classification_container
+    ports:
+      - "5000:5000"  
+    volumes:
+      - .:/app  #Monte le répertoire actuel (.) dans le conteneur à l'emplacement /app
+    command: sh -c "python /app/train_classifier.py && python /app/predict_classification.py"
+      #Spécifie la commande à exécuter lorsque le conteneur démarre, ici les deux scripts Python.
+
