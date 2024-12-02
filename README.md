@@ -39,24 +39,17 @@ Nous avons ensuite utilisé ces modèles dans le fichier EDA_datageneration.ipyn
   - L'utilisation du gridsearch nous a permis de trouver la meilleure combinaison des hyperparamètres de chaque modèle.
 
 Lorsque la meilleure combinaison est trouvée, nous avons créé le fichier .py qui reprend :
-    a. **Génération de données** : Le code génère un jeu de données synthétiques avec 15 000 échantillons et 20 caractéristiques à l'aide de `make_classification` de `scikit-learn`. Certaines caractéristiques sont informatives, d'autres redondantes. Une           sélection de colonnes est ensuite effectuée pour réduire le nombre de caractéristiques utilisées.
+    a. Génération de données : Le code génère un jeu de données synthétiques avec 15 000 échantillons et 20 caractéristiques à l'aide de `make_classification` de `scikit-learn`. Certaines caractéristiques sont informatives, d'autres redondantes. Une           sélection de colonnes est ensuite effectuée pour réduire le nombre de caractéristiques utilisées.
     
-    b. **Séparation des données** : Le jeu de données est divisé en ensembles d'entraînement, de test et de validation à l'aide de `train_test_split`. L'argument `stratify=y` est utilisé pour maintenir la distribution des classes dans les sous-ensembles.
+    b. *Séparation des données*: Le jeu de données est divisé en ensembles d'entraînement, de test et de validation à l'aide de `train_test_split`. L'argument `stratify=y` est utilisé pour maintenir la distribution des classes dans les sous-ensembles.
     
-    c. **Entraînement et sélection du meilleur modèle** : Trois modèles (Random Forest, SVM et Gradient Boosting) sont entraînés sur les données d'entraînement. La précision de chaque modèle est calculée sur l'ensemble de test. Le modèle ayant la       
+    c. Entraînement et sélection du meilleur modèle : Trois modèles (Random Forest, SVM et Gradient Boosting) sont entraînés sur les données d'entraînement. La précision de chaque modèle est calculée sur l'ensemble de test. Le modèle ayant la       
          meilleure précision est sélectionné.
     
-    d. **Exportation du modèle et des données** : Le meilleur modèle est enregistré dans un fichier binaire à l'aide de `pickle`. Les données de validation sont également sauvegardées dans un fichier CSV pour une utilisation ultérieure.
+    d. Exportation du modèle et des données : Le meilleur modèle est enregistré dans un fichier binaire à l'aide de `pickle`. Les données de validation sont également sauvegardées dans un fichier CSV pour une utilisation ultérieure.
     
-    ### Points forts :
-    - **Modularité** : Le code est bien structuré, avec des fonctions claires et séparées pour chaque étape du processus.
-    - **Utilisation de `stratify`** : Cette approche garantit que la distribution des classes est maintenue dans les sous-ensembles de données, ce qui est important pour les problèmes de classification.
-    - **Approche simple et efficace** : Le code utilise une méthode simple mais efficace pour entraîner et comparer plusieurs modèles.
+    ### Points clés :
+    - Modularité : Le code est bien structuré, avec des fonctions claires et séparées pour chaque étape du processus.
+    - Utilisation de `stratify` : Cette approche garantit que la distribution des classes est maintenue dans les sous-ensembles de données, ce qui est important pour les problèmes de classification.
+    - Approche simple et efficace : Le code utilise une méthode simple mais efficace pour entraîner et comparer plusieurs modèles.
     
-    ### Améliorations possibles :
-    - **Évaluation complète** : En plus de la précision, il serait utile d'inclure des métriques comme la précision, le rappel, ou la matrice de confusion pour mieux évaluer les performances des modèles.
-    - **Optimisation des hyperparamètres** : L'ajout de la recherche d'hyperparamètres avec `GridSearchCV` ou `RandomizedSearchCV` pourrait améliorer la performance des modèles.
-    - **Visualisation** : Des graphiques supplémentaires, comme une matrice de confusion ou des courbes d'importance des caractéristiques, seraient utiles pour mieux comprendre les résultats.
-
-En résumé, ce code est bien conçu pour entraîner et comparer plusieurs modèles de classification tout en exportant les résultats pour une utilisation ultérieure.
-Prédition
